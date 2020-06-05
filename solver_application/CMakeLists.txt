@@ -11,3 +11,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib ${CMAKE_CURRENT_SO
 add_executable(solver ${CMAKE_CURRENT_SOURCE_DIR}/equation.cpp)
 target_link_libraries(solver solver_lib)
 
+
+install(TARGETS solver
+	ARCHIVE DESTINATION lib
+	RUNTIME DESTINATION bin
+)
