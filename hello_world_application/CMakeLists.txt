@@ -9,3 +9,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib ${CMAKE_CURR
 add_executable(hello_world ${CMAKE_CURRENT_SOURCE_DIR}/hello_world.cpp)
 target_link_libraries(hello_world formatter_ex)
 
+#https://cmake.org/cmake/help/v3.13/command/install.html
+install(TARGET hello_world
+	RUNTIME DESTINATION bin
+)
